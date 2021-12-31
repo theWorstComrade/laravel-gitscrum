@@ -24,7 +24,7 @@ class AttachmentRequest extends FormRequest
     public function rules()
     {
         return [
-            'attachment' => 'required',
+            'attachment' => 'required|max:20000|mimes:gif,jpg,png,pdf,doc,docx,xls,xlsx,ppt,pptx,rar,zip',
         ];
     }
 
@@ -37,6 +37,8 @@ class AttachmentRequest extends FormRequest
     {
         return [
             'attachment.required' => trans('gitscrum.attachment-cannot-be-blank'),
+            'attachment.mimes' => trans('gitscrum.attachment-wrong-type'),
+            'attachment.max' => trans('gitscrum.attachment-size'),
         ];
     }
 }

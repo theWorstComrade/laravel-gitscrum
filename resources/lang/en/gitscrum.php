@@ -200,4 +200,6 @@ return array (
   'organization-id-required' => 'you must choose an organization',
   'organization-id-exists' => 'organization_id must exist in organizations table',
   'you-have' => 'You have',
+  'attachment-wrong-type' => 'The attachment can be one of the following types: gif, jpg, png, pdf, doc, docx, xls, xlsx, ppt, pptx, rar, zip',
+  'attachment-size' => 'The attachment size can be maximum 20MB',
 );
